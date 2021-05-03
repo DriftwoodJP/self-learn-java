@@ -7,13 +7,13 @@ public class StreamCollect {
 
   public static void main(String[] args) {
     System.out.println(
-      Stream.of("バラ", "あさがお", "チューリップ", "さくら")
-        .sorted()
-        .collect(
-          ArrayList<String>::new,
-          (list, str) -> list.add(str),
-          (list1, list2) -> list1.addAll(list2)
-        )
+            java.util.Optional.of(Stream.of("バラ", "あさがお", "チューリップ", "さくら")
+                    .sorted()
+                    .collect(
+                            ArrayList<String>::new,
+                            (list, str) -> list.add(str),
+                            (list1, list2) -> list1.addAll(list2)
+                    ))
 
 //      .collect(
 //          ArrayList::new,

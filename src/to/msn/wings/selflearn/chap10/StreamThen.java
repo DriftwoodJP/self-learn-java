@@ -8,14 +8,14 @@ public class StreamThen {
 
   public static void main(String[] args) {
     System.out.println(
-        Stream.of("バラ", "あさがお", "さざんか", "うめ", "さくら")
-          .sorted()
-          .collect(
-            Collectors.collectingAndThen(
-              Collectors.toList(),
-              Collections::unmodifiableList
-            )
-          )
+            java.util.Optional.ofNullable(Stream.of("バラ", "あさがお", "さざんか", "うめ", "さくら")
+                    .sorted()
+                    .collect(
+                            Collectors.collectingAndThen(
+                                    Collectors.toList(),
+                                    Collections::unmodifiableList
+                            )
+                    ))
       );
   }
 }
